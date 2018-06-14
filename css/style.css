@@ -1,0 +1,115 @@
+* {
+    padding: none;
+    margin: none;
+    outline: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+.btn-group {
+    text-align: center;
+}
+
+button {
+    font-size: 1.2em;
+    width: 120px;
+    margin: 15px;
+    padding: 6px;
+    background-color: #174182;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 8px #333;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(8px);
+}
+
+.blue-eyes .eye-color {
+    fill: #175282;
+}
+
+.sad .mouth {
+    transform: rotate(180deg) scale(0.5);
+    transform-origin: 340px 390px;
+}
+
+@keyframes moveEyes {
+    20% {
+        transform: translate(-18px, -20px);
+    }
+    40% {
+        transform: translate(0, 0);
+    }
+    65% {
+        transform: translate(18px, -20px);
+    }
+    to {
+        transform: translate(18px, 0);
+    }
+}
+
+.move-around .inner-eye-group {
+    animation: moveEyes 12s infinite;
+}
+
+@keyframes moveLeftWhiskers {
+    20% {
+        transform: rotate(5deg);
+    }
+    60% {
+        transform: rotate(-5deg);
+    }
+}
+
+.move-around .left-whiskers {
+    animation: moveLeftWhiskers 3s infinite;
+    transform-origin: 325px 350px;
+}
+
+@keyframes moveRightWhiskers {
+    5% {
+        transform: rotate(-2deg);
+    }
+    90% {
+        transform: rotate(7deg);
+    }
+}
+
+.move-around .right-whiskers {
+    animation: moveRightWhiskers 3s infinite;
+    transform-origin: 325px 350px;
+}
+
+@keyframes moveAround {
+    40% {
+        transform: rotateY(10deg) rotateX(10deg);
+    }
+    40% {
+        transform: rotateY(25deg) rotateX(10deg);
+    }
+    60% {
+        transform: rotateY(-10deg) rotateX(-10deg);
+    }
+    85% {
+        transform: rotateY(-10deg) rotateX(-16deg);
+    }
+}
+
+.move-around {
+    animation: moveAround 8s infinite;
+}
+
+.svg-container {
+    perspective: 1000px;
+}
